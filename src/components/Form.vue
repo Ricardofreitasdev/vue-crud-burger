@@ -116,8 +116,9 @@ export default {
 
     form{
         padding: 8px;
-        background: rgb(221, 221, 221);
+        background: var(--bg);
         border-radius: 8px;
+        margin-bottom: 50px;
     }
     .input-container{
         padding: 8px;

@@ -1,7 +1,8 @@
 <template>
   <!-- <Banner /> -->
-  <div class="main">
-    <h2>Monte o seu Burger</h2>
+  <div class="main container">
+    <Info title="Monte o seu Burger" />
+
     <section>
     <Form />
     </section>
@@ -12,22 +13,20 @@
 
 import Banner from "../components/Banner.vue"
 import Form from "../components/Form.vue"
+import Info from "../components/Info.vue";
 
 export default {
   name: 'Home',
   components: {
     Banner,
-    Form
-  }
+    Form,
+    Info
+}
 }
 </script>
 
 
 <style scoped>
-h2{
-  text-align: center;
-  margin-bottom: 50px;
-}
 
 section{
   display: flex;

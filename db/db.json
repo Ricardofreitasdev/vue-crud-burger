@@ -79,140 +79,25 @@
   ],
   "burgers": [
     {
-      "nome": "Matheus Battisti",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
+      "name": "Ricardo Freitas",
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Bacon",
-        "Salame",
         "Cebola roxa"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 1
     },
     {
-      "nome": "João Coelho",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "name": "Ricardo Freitas",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
       "name": "Ricardo Paulino de Freitas",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 7
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Picanha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 8
-    },
-    {
-      "name": "Admin",
       "carne": "Veggie burger",
       "pao": "3 Queijos",
       "opcionais": [
-        "Tomate",
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 9
-    },
-    {
-      "name": "Ricardo Freitas",
-      "carne": "Alcatra",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 10
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 11
-    },
-    {
-      "name": "dogão cabuloso",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 12
-    },
-    {
-      "name": "dogão cabuloso",
-      "carne": "Selecione a carne",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
+        "Cheddar",
         "Tomate"
       ],
-      "status": "Solicitado",
-      "id": 13
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Picanha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Salame"
-      ],
-      "status": "Solicitado",
-      "id": 14
-    },
-    {
-      "name": "Ricardo Freitas",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Salame",
-        "Bacon",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 15
+      "status": "Finalizado",
+      "id": 2
     }
   ]
 }

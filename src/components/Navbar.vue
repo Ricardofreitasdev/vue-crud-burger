@@ -1,9 +1,11 @@
 <template>
  <header>
-    <router-link to="/">
-     <img :src="logo" :alt="alt">
-    </router-link> 
-    <router-link to="/orders">Pedidos</router-link>
+    <div class="container">
+        <router-link to="/">
+         <img :src="logo" :alt="alt">
+        </router-link> 
+        <router-link to="/orders">Pedidos</router-link>
+    </div>
   </header>
 </template>
 
@@ -19,6 +21,9 @@ props: ["logo", "alt"]
         width: 100%;
         padding: 15px;
         background: var(--color-1);
+    }
+
+    header div{
         display: flex;
         align-content: center;
         justify-content: space-between;
