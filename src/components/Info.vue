@@ -13,8 +13,7 @@ export default {
 <style>
     h1{
         text-align: center;
-        text-align: center;
-        margin: 50px 0;
+        margin-bottom: 50px;
     }
 
 </style>

@@ -87,40 +87,68 @@ export default {
 }
 </script>
 
-<style scoped>
- .admin__item{
-    display: flex;
-    padding: 8px 16px;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--bg);
-    border-radius: 4px;
-    margin-bottom: 10px;
+<style lang="scss" scoped>
 
- }
+.admin{
 
- .admin__client{
-  display: flex;
-  flex: 1;
-  flex-direction: column;
- }
+  &__item{
+     display: flex;
+     padding: 8px 16px;
+     justify-content: space-between;
+     align-items: flex-start;
+     background: var(--bg);
+     border-radius: 4px;
+     margin-bottom: 10px;
 
- .admin__burger{
-    display: flex;
-    flex: 2;
-    justify-content: space-between;
- }
+     span{
+      font-weight: bold;
+      font-size: 12px;
+     }
+ 
+  }
+ 
+  &__client{
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+  }
+ 
+  &__burger{
+     display: flex;
+     flex: 2;
+     justify-content: space-between;
+ 
+     &--carne, &--pao, &--opcionais{
+       flex: 1;
+     }
+      &--status{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
 
- .admin__burger--status{
-  display: flex;
-  flex-direction: column;
- }
+      select{
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        margin-bottom: 4px;
+        padding: 4px;
+      }
 
-.admin__burger--status, .admin__burger--carne,.admin__burger--pao, .admin__burger--opcionais{
-  flex: 1;
+      button{
+        background:red;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        margin-bottom: 4px;
+        padding: 4px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+ 
+
 }
- span{
-  font-weight: bold;
-  font-size: 12px;
- }
+
+
 </style>

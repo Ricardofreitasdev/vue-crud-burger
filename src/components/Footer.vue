@@ -1,31 +1,32 @@
 <template>
   <footer>
-    <p>Make your Burger &copy; {{ year }}</p>
+    <p>Make your Burger &copy; {{ getYear }}</p>
   </footer>
 </template>
 
 <script>
 export default {
 name: "Footer",
-    data(){
-        return {
-            year: new Date().getFullYear()
+    computed: {
+        getYear() {
+            return new Date().getFullYear()
         }
     }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     footer{
-        height: 80px;
+        height: 10vh;
         background: var(--color-1);
         display: flex;
         align-items: center;
         justify-content: center;
         bottom: 0;
+
+        p {
+            color: var(--text-color);
+        }
     }
 
-    footer p {
-        color: var(--text-color);
-    }
 </style>
