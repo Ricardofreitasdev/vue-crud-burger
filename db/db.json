@@ -81,23 +81,12 @@
     {
       "name": "Ricardo Freitas",
       "carne": "Maminha",
-      "pao": "Parmesão e Orégano",
-      "opcionais": [
-        "Cebola roxa"
-      ],
-      "status": "Em produção",
-      "id": 1
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Veggie burger",
       "pao": "3 Queijos",
       "opcionais": [
-        "Cheddar",
         "Tomate"
       ],
       "status": "Finalizado",
-      "id": 2
+      "id": 3
     }
   ]
 }

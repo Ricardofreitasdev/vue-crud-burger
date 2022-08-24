@@ -16,32 +16,34 @@ props: ["logo", "alt"]
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     header{
         width: 100%;
         padding: 15px;
         background: var(--color-1);
+        height: 10vh;
+
+        div{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        img{
+            max-height: 90%;
+        }
+
+        a{
+            color:var(--color-2);
+            display: flex;
+            align-items: center;
+            transition: ease-in-out 0.3s;
+
+            &:hover{
+                color:var(--text-color);
+            }
+        }
     }
 
-    header div{
-        display: flex;
-        align-content: center;
-        justify-content: space-between;
-    }
-
-    img{
-        max-height: 50px;
-    }
-
-    a{
-        color:var(--color-2);
-        display: flex;
-        align-items: center;
-        transition: ease-in-out 0.3s;
-    }
-
-
-    a:hover{
-        color:var(--text-color);
-    }
 </style>
