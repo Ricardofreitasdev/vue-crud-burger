@@ -85,8 +85,18 @@
       "opcionais": [
         "Tomate"
       ],
-      "status": "Finalizado",
+      "status": "Em produção",
       "id": 3
+    },
+    {
+      "name": "Ricardo Paulino de Freitas",
+      "carne": "Veggie burger",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
