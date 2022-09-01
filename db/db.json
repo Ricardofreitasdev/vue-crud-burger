@@ -77,26 +77,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "name": "Ricardo Freitas",
-      "carne": "Maminha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Tomate"
-      ],
-      "status": "Em produção",
-      "id": 3
-    },
-    {
-      "name": "Ricardo Paulino de Freitas",
-      "carne": "Veggie burger",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon"
-      ],
-      "status": "Solicitado",
-      "id": 4
-    }
-  ]
+  "burgers": []
 }
