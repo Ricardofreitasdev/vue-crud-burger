@@ -1,25 +1,26 @@
 <template>
   <Navbar :logo="logo_src" :alt="app_name" />
-  <router-view/>
+  <Suspense>
+    <router-view />
+  </Suspense>
   <Footer />
 </template>
 
 <script>
+import "./assets/style/global.css";
+import Footer from "./components/Footer.vue";
+import Navbar from "./components/Navbar.vue";
 
-import "./assets/style/global.css"
-import Footer from "./components/Footer.vue"
-import Navbar from "./components/Navbar.vue"
-
-export default{
+export default {
   components: {
     Navbar,
-    Footer
-  }, 
+    Footer,
+  },
   data() {
     return {
       logo_src: "/img/logo.png",
-      app_name: "Burger Admin"
-    }
-  }
-}
+      app_name: "Burger Admin",
+    };
+  },
+};
 </script>

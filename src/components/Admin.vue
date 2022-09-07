@@ -1,53 +1,15 @@
 <template>
   <div v-if="orders.length > 0" class="admin">
-    <div
+    <admin-card
+      :order="order"
+      :status="status"
       v-for="order in orders"
       :key="order.id"
       class="admin__item"
       :class="order.status"
-    >
-      <div class="admin__client">
-        <span>Cliente</span>
-        <p>{{ order.name }}</p>
-      </div>
-      <div class="admin__burger">
-        <div class="admin__burger--carne">
-          <span>Tipo de carne:</span>
-          <p>{{ order.carne }}</p>
-        </div>
-        <div class="admin__burger--pao">
-          <span>Tipo de pao:</span>
-          <p>{{ order.pao }}</p>
-        </div>
-        <div class="admin__burger--opcionais">
-          <span>Opcionais:</span>
-          <ul>
-            <li v-for="(item, index) in order.opcionais" :key="index">
-              {{ item }}
-            </li>
-          </ul>
-        </div>
-        <div class="admin__burger--status">
-          <select
-            name="status"
-            class="status"
-            @change="updateBurger($event, order.id)"
-          >
-            <option
-              :value="s.tipo"
-              v-for="s in status"
-              :key="s.id"
-              :selected="order.status == s.tipo"
-            >
-              {{ s.tipo }}
-            </option>
-          </select>
-          <button class="delete-btn" @click="deleteBurger(order.id)">
-            Cancelar
-          </button>
-        </div>
-      </div>
-    </div>
+      @onClickDelete="deleteBurger"
+      @onChangeUpdate="updateBurger"
+    ></admin-card>
   </div>
   <div class="admin__empty" v-else>
     <h2>
@@ -58,39 +20,29 @@
 </template>
 
 <script>
+import { computed } from "@vue/runtime-core";
+import store from "../store";
+import AdminCard from "./AdminCard.vue";
 export default {
   name: "Admin",
   data() {
     return {
-      orders: [],
-      status: [],
       class: null,
     };
   },
   methods: {
-    async getOrdersApi() {
-      const req = await fetch("http://localhost:3000/burgers");
-      const data = await req.json();
-      this.orders = data;
-    },
-
-    async getStatus() {
-      const req = await fetch("http://localhost:3000/status");
-      const data = await req.json();
-      this.status = data;
-    },
-
-    async updateBurger(event, id) {
-      const option = event.target.value;
-      const dataJson = JSON.stringify({ status: option });
-      const req = await fetch(`http://localhost:3000/burgers/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: dataJson,
+    formatStatus(arr) {
+      const list = arr.map((item) => {
+        return item.status;
       });
 
-      await req.json();
-      this.getOrdersApi();
+      const counterStatus = {
+        do: list.filter((item) => item.id == 1),
+        todo: list.filter((item) => item.id == 2),
+        done: list.filter((item) => item.id == 3),
+      };
+
+      return counterStatus;
     },
 
     async deleteBurger(id) {
@@ -98,17 +50,41 @@ export default {
         method: "DELETE",
       });
       await req.json();
-      this.getOrdersApi();
+      store.dispatch("GET_ORDERS");
     },
   },
-  async mounted() {
-    await this.getOrdersApi();
-    await this.getStatus();
+
+  components: { AdminCard },
+
+  async setup() {
+    store.dispatch("GET_ORDERS");
+    const status = await store.dispatch("GET_STATUS");
+
+    const orders = computed(() => store.state.orders);
+
+    const updateBurger = async ({ event_name, option, id }) => {
+      const res = await store.dispatch("UPDATE", {
+        event_name,
+        option,
+        id,
+      });
+
+      if (res) {
+        store.dispatch("GET_ORDERS");
+      }
+    };
+
+    return {
+      updateBurger,
+      orders,
+      store,
+      status,
+    };
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .admin {
   &__item {
     display: flex;

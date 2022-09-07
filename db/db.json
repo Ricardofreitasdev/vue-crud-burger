@@ -54,12 +54,16 @@
         "tipo": "Tomate"
       },
       {
-        "id": 4,
+        "id": 5,
         "tipo": "Cebola roxa"
       },
       {
-        "id": 4,
+        "id": 6,
         "tipo": "Pepino"
+      },
+      {
+        "id": 7,
+        "tipo": "Picles"
       }
     ]
   },
@@ -74,8 +78,22 @@
     },
     {
       "id": 3,
-      "tipo": "Finalizado"
+      "tipo": "Pronto"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "name": "Ricardo Paulino de Freitas",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Picles"
+      ],
+      "status": {
+        "name": "Pronto",
+        "id": "3"
+      },
+      "id": 1
+    }
+  ]
 }
