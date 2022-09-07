@@ -89,10 +89,7 @@
       "opcionais": [
         "Picles"
       ],
-      "status": {
-        "name": "Pronto",
-        "id": "3"
-      },
+      "status": "Em produção",
       "id": 1
     },
     {
@@ -102,6 +99,36 @@
       "opcionais": [],
       "status": "Solicitado",
       "id": 2
+    },
+    {
+      "name": "Ricardo Paulino de Freitas",
+      "carne": "Veggie burger",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "name": "Ricardo Freitas",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Salame"
+      ],
+      "status": "Solicitado",
+      "id": 4
+    },
+    {
+      "name": "Ricardo Paulino de Freitas",
+      "carne": "Picanha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 5
     }
   ]
 }
